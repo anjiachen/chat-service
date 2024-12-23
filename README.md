@@ -9,13 +9,13 @@
 
 ## 在线访问
 
-访问地址：[待部署后添加]
+访问地址：[https://anjiachen.github.io/chat-service/](https://anjiachen.github.io/chat-service/)
 
 ## 本地运行
 
 1. 克隆项目到本地
 ```bash
-git clone [你的仓库地址]
+git clone https://github.com/anjiachen/chat-service.git
 ```
 
 2. 使用任意 HTTP 服务器运行项目
