@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container" bind:touchstart="onTouchStart" bind:touchend="onTouchEnd">
+  <canvas type="2d" id="gameCanvas" class="game-canvas"></canvas>
+  <view class="score">得分：{{score}}</view>
+  <view class="start-btn" bind:tap="startGame" wx:if="{{!isPlaying}}" catch:tap>开始游戏</view>
+</view>

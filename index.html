@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能客服</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="chat-layout">
+        <div class="chat-container main-chat">
+            <!-- 顶部导航栏 -->
+            <div class="chat-header">
+                <div class="header-info">
+                    <div class="avatar">👩</div>
+                    <div class="info">
+                        <div class="name">小美</div>
+                        <div class="status">在线</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 聊天内容区域 -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="messages-container" id="messagesContainer">
+                    <!-- 消息内容将通过 JavaScript 动态添加 -->
+                </div>
+            </div>
+
+            <!-- 输入区域 -->
+            <div class="chat-input-area">
+                <input 
+                    type="text" 
+                    class="chat-input" 
+                    id="messageInput"
+                    placeholder="输入消息..." 
+                    autocomplete="off"
+                >
+                <button class="send-btn" id="sendButton" disabled>
+                    <span class="send-icon">发送</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="chat-container report-chat">
+            <!-- 顶部导航栏 -->
+            <div class="chat-header">
+                <div class="header-info">
+                    <div class="avatar">📊</div>
+                    <div class="info">
+                        <div class="name">沟通报告</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 报告内容区域 -->
+            <div class="chat-messages" id="reportMessages">
+                <div class="messages-container" id="reportContainer">
+                    <!-- 报告内容将通过 JavaScript 动态添加 -->
+                </div>
+            </div>
+
+            <!-- 按钮区域 -->
+            <div class="chat-input-area">
+                <button class="report-btn" id="generateReportBtn">
+                    <span class="report-icon">生成沟通报告</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html> 

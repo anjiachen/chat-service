@@ -1,0 +1,50 @@
+<view class="chat-container">
+  <!-- 顶部导航栏 -->
+  <view class="chat-header">
+    <view class="header-info">
+      <image class="avatar" src="/assets/images/bot-avatar.png" mode="aspectFill"></image>
+      <view class="info">
+        <view class="name">智能客服</view>
+        <view class="status">在线</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 聊天内容区域 -->
+  <scroll-view 
+    class="chat-messages" 
+    scroll-y="true" 
+    scroll-into-view="{{scrollToMessage}}"
+    enhanced="true"
+    show-scrollbar="false"
+  >
+    <view class="messages-container">
+      <block wx:for="{{messages}}" wx:key="id">
+        <view class="message {{item.type === 'user' ? 'message-right' : 'message-left'}}" id="msg-{{item.id}}">
+          <image class="message-avatar" src="{{item.type === 'user' ? '/assets/images/user-avatar.png' : '/assets/images/bot-avatar.png'}}" mode="aspectFill"></image>
+          <view class="message-content">
+            <view class="message-text">{{item.content}}</view>
+            <view class="message-time">{{item.time}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+  <!-- 输入区域 -->
+  <view class="chat-input-area">
+    <input 
+      class="chat-input" 
+      type="text" 
+      placeholder="输入消息..." 
+      value="{{inputMessage}}"
+      bindinput="onInputChange"
+      bindconfirm="sendMessage"
+      confirm-type="send"
+      cursor-spacing="20"
+    />
+    <view class="send-btn {{inputMessage ? 'active' : ''}}" bindtap="sendMessage">
+      <text class="send-icon">发送</text>
+    </view>
+  </view>
+</view> 

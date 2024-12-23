@@ -1,0 +1,9 @@
+<view class="login-container">
+  <view class="login-box">
+    <image class="logo" src="/assets/images/logo.png" mode="aspectFit"></image>
+    <view class="title">客服助手</view>
+    <view class="subtitle">随时为您服务</view>
+    <input class="input" type="text" placeholder="请输入您的名字" model:value="{{username}}" />
+    <button class="login-btn" bindtap="handleLogin">开始对话</button>
+  </view>
+</view> 
